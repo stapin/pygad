@@ -2234,7 +2234,7 @@ class GA(utils.parent_selection.ParentSelection,
             if pop_fitness_arr.ndim == 1:
                 # Single-objective optimization.
                 best_match_idx = numpy.where(
-                 pop_fitness == numpy.max(pop_fitness))[0][0]
+                 pop_fitness == numpy.nanmax(pop_fitness))[0][0]
             elif pop_fitness_arr.ndim == 2:
                 # Multi-objective optimization.
                 # Use NSGA-2 to sort the solutions using the fitness.
